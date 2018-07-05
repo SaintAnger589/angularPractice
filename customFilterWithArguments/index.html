@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Filter Example app</title>
+    <script type="text/javascript" src="angular.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+    </script>
+  </head>
+  <body ng-app="MsgApp"> 
+    <h1>Filters</h1>
+    <div ng-controller="MsgController">
+      {{name}} has a message for you: <br>
+      {{sayMessage()}}
+      <button type="button" name="button" ng-click="feedYaakov()">Feed Yaakov</button>
+      {{sayLovesMessage()}}
+      Cost of cookie : {{cookieCost | currency : "#" : 4}}<br>
+      Truth : {{sayLovesMessage() | truth: 'healthy' : 'Cookie'}}
+      <br>
+      <img src="images/yaakov_{{stateOfBeing}}.png">
+    </div>
+
+  </body>
+</html>
